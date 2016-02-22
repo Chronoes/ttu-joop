@@ -1,0 +1,18 @@
+import java.util.HashMap;
+
+public class StudentsOOP {
+    private HashMap students = new HashMap();
+    private int ID = 0;
+
+    public void addStudent(StudentOOP student) {
+        this.students.put(this.ID++, student);
+    }
+
+    public void addPoints(int studentID, int pointsToAdd) {
+        this.students.put(studentID, this.getPoints(studentID) + pointsToAdd);
+    }
+
+    public int getPoints(int studentID) {
+        return (int)this.students.get(studentID).getPoints();
+    }
+}
